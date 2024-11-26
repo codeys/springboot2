@@ -1,0 +1,8 @@
+# 单节点配置
+singleServerConfig:
+  # 数据库编号
+  database: 0
+  # 节点地址
+  address: redis://127.0.0.1:6379
+  # 密码
+  password: 1qaz2wsx!QAZ@WSX
