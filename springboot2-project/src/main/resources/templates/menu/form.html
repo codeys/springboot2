@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>单列表单布局</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个字...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">单选框：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8" pane="">
+                            <label class="layui-form-label">复选框：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">开关-默认开：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">日期选择器：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="date" id="date" lay-verify="date" placeholder="请选择日期" autocomplete="off" class="layui-input"><i class="layui-date-ico"></i>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md8">
+                            <label class="layui-form-label">长文本输入框：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-btn-center">
+                            <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                            <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>双列表单布局</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">单选框：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">复选框：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">开关-默认开：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">长文本输入框：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item layui-btn-center">
+                            <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                            <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>分组表单</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>超过六个字...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">单选框：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                            </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+
+                <div class="layui-card-header" style="padding-top: 0px;"><label></label>分组表单</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>超过六个字...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">长文本输入框：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">复选框：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+
+                <div class="layui-card-header" style="padding-top: 0px;"><label></label>分组表单</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>超过六个字...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">单选框：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">复选框：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">开关-默认开：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-btn-center">
+                            <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                            <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-tab layui-tab-simplicity">
+                        <ul class="layui-tab-title">
+                            <li class="layui-this">填写表单-1</li>
+                            <li>填写表单-2</li>
+                            <li>填写表单-3</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <form class="layui-form">
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个...：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">基础选择器：</label>
+                                        <div class="layui-input-block">
+                                            <select name="interest" lay-filter="aihao">
+                                                <option value="" selected=""></option>
+                                                <option value="0">写作</option>
+                                                <option value="1">阅读</option>
+                                                <option value="2">游戏</option>
+                                                <option value="3">音乐</option>
+                                                <option value="4">旅行</option>
+                                            </select>
+                                            <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">单选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                            <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                            <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">复选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">开关-默认开：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">长文本输入框：</label>
+                                        <div class="layui-input-block">
+                                            <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item layui-btn-center">
+                                        <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                                        <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+                                </form>
+                            </div>
+                            <div class="layui-tab-item">
+                                <form class="layui-form">
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">开关-默认开：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">复选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个...：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">单选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                            <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                            <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">基础选择器：</label>
+                                        <div class="layui-input-block">
+                                            <select name="interest" lay-filter="aihao">
+                                                <option value="" selected=""></option>
+                                                <option value="0">写作</option>
+                                                <option value="1">阅读</option>
+                                                <option value="2">游戏</option>
+                                                <option value="3">音乐</option>
+                                                <option value="4">旅行</option>
+                                            </select>
+                                            <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">长文本输入框：</label>
+                                        <div class="layui-input-block">
+                                            <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item layui-btn-center">
+                                        <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                                        <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+                                </form>
+                            </div>
+                            <div class="layui-tab-item">
+                                <form class="layui-form">
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">基础选择器：</label>
+                                        <div class="layui-input-block">
+                                            <select name="interest" lay-filter="aihao">
+                                                <option value="" selected=""></option>
+                                                <option value="0">写作</option>
+                                                <option value="1">阅读</option>
+                                                <option value="2">游戏</option>
+                                                <option value="3">音乐</option>
+                                                <option value="4">旅行</option>
+                                            </select>
+                                            <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">单选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                            <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                            <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">复选框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                            <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">开关-默认开：</label>
+                                        <div class="layui-input-block">
+                                            <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                            <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">标题长度不超过十个字：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个...：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                        </div>
+                                    </div>
+                                    <div class="layui-form-item layui-col-md6">
+                                        <label class="layui-form-label">长文本输入框：</label>
+                                        <div class="layui-input-block">
+                                            <textarea placeholder="请输入内容" class="layui-textarea"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item layui-btn-center">
+                                        <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">确定</button>
+                                        <button type="reset" class="layui-btn layui-btn-sm layui-btn-normal">取消</button>
+                                    </div>
+
+                                    <div style="clear: both;"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <ul class="layui-step-base" style="width: 800px; margin: 0px auto 24px;">
+                        <li class="layui-step-base-complete" style="width: 200px;">
+                            <dl>
+                                <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                <dd><p>第一步</p><span>辅助信息</span></dd>
+                            </dl>
+                        </li>
+                        <li class="layui-step-base-active" style="width: 200px;">
+                            <dl>
+                                <dt><label><em></em></label></dt>
+                                <dd><p>第二步</p><span>辅助信息</span></dd>
+                            </dl>
+                        </li>
+                        <li style="width: 200px;">
+                            <dl>
+                                <dt><label></label></dt>
+                                <dd><p>第三步</p><span>辅助信息</span></dd>
+                            </dl>
+                        </li>
+                        <li style="width: 200px;">
+                            <dl>
+                                <dt><label></label></dt>
+                                <dd><p>第四步</p><span>辅助信息</span></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl>
+                                <dt><label></label></dt>
+                                <dd><p>第五步</p><span>辅助信息</span></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">标题长度不超过十个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label" title="标题长度不超过十个字,超出用省略号替代">标题长度不超过十个...：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label"><label class="layui-form-label-red">*</label>基础输入框：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">基础选择器：</label>
+                            <div class="layui-input-block">
+                                <select name="interest" lay-filter="aihao">
+                                    <option value="" selected=""></option>
+                                    <option value="0">写作</option>
+                                    <option value="1">阅读</option>
+                                    <option value="2">游戏</option>
+                                    <option value="3">音乐</option>
+                                    <option value="4">旅行</option>
+                                </select>
+                                <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">单选框：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="xiangmu" value="项目A" title="项目A" checked="">
+                                <input type="radio" name="xiangmu" value="项目B" title="项目B">
+                                <input type="radio" name="xiangmu" value="项目C" title="项目C" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">复选框：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称1" checked="">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称2">
+                                <input type="checkbox" name="like1[xiangmu]" lay-skin="primary" title="项目名称3" disabled="">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md6">
+                            <label class="layui-form-label">开关-默认开：</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" checked="" name="open" lay-skin="switch" lay-filter="switchTest" lay-text="已开启|已关闭">
+                                <div class="layui-form-mid2 layui-word-aux"><i class="layui-icon layui-icon-about" onMouseOver="layer.tips('在此输入提示信息',this, {tips: [1,'#42475B']});"></i></div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item layui-btn-center">
+                            <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">上一步</button>
+                            <button type="submit" class="layui-btn layui-btn-sm" lay-submit="" lay-filter="demo1">下一步</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>单行搜索</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">五个字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">四字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-col-md3">
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-icon2"><i class="layui-icon layui-icon-search"></i>搜索</button>
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border">重置</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>多行搜索</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">五个字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">四字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">三个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-btn-center">
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-icon2"><i class="layui-icon layui-icon-search"></i>搜索</button>
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border">重置</button>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>高级搜索-收起</div>
+                <div class="layui-card-body">
+                        <form class="layui-form">
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">不超过六个字：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">五个字标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">四字标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">三个字：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-btn-center">
+                                <button type="button" class="layui-btn layui-btn-sm layui-btn-icon2"><i class="layui-icon layui-icon-search"></i>搜索</button>
+                                <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border">重置</button>
+                                <a href="#" class="layui-btn-text">高级筛选 <i class="layui-icon layui-icon-down"></i></a>
+                            </div>
+
+                            <div style="clear: both;"></div>
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-header"><label></label>高级搜索</div>
+                <div class="layui-card-body">
+                    <form class="layui-form">
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">不超过六个字：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">五个字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-item-short layui-col-md3">
+                            <label class="layui-form-label">四字标题：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="more-container">
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">三个字：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">不超过六个字：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">五个字标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">四字标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">三个字：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-form-item layui-form-item-short layui-col-md3">
+                                <label class="layui-form-label">标题：</label>
+                                <div class="layui-input-block">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-btn-center" id="searchbtns">
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-icon2"><i class="layui-icon layui-icon-search"></i>搜索</button>
+                            <button type="button" class="layui-btn layui-btn-sm layui-btn-primary layui-border">重置</button>
+                            <div  class="more-btn layui-btn-text">收起<i class="layui-icon layui-icon-up"></i></div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', /*'layedit',*/ 'laydate','element'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,$ = layui.jquery
+            ,laydate = layui.laydate
+            ,element=layui.element
+
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        laydate.render({
+            elem: '#date1'
+        });
+
+        //创建一个编辑器
+        var editIndex = layedit.build('LAY_demo_editor');
+
+        //自定义验证规则
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [
+                /^[\S]{6,12}$/
+                ,'密码必须6到12位，且不能出现空格'
+            ]
+            ,content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+
+        //监听指定开关
+        form.on('switch(switchTest)', function(data){
+            layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+        //表单赋值
+        layui.$('#LAY-component-form-setval').on('click', function(){
+            form.val('example', {
+                "username": "贤心" // "name": "value"
+                ,"password": "123456"
+                ,"interest": 1
+                ,"like[write]": true //复选框选中状态
+                ,"close": true //开关状态
+                ,"sex": "女"
+                ,"desc": "我爱 layui"
+            });
+        });
+
+        //表单取值
+        layui.$('#LAY-component-form-getval').on('click', function(){
+            var data = form.val('example');
+            alert(JSON.stringify(data));
+        });
+        layui.form()
+    });
+</script>
+<script>
+    layui.use(['laydate','util'], function(){
+        var laydate = layui.laydate
+            ,$=layui.jquery
+        var util = layui.util;
+        //直接嵌套显示
+        laydate.render({
+            elem: '#test-n1'
+            ,position: 'static'
+        });
+        laydate.render({
+            elem: '#test-n2'
+            ,position: 'static'
+            ,lang: 'en'
+        });
+        laydate.render({
+            elem: '#test-n3'
+            ,type: 'month'
+            ,position: 'static'
+        });
+        laydate.render({
+            elem: '#test-n4'
+            ,type: 'time'
+            ,position: 'static'
+        });
+
+        laydate.render({
+            elem: '#date'
+            ,eventElem: '.layui-date'
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: "#ID-laydate-shortcut-date",
+            shortcuts: [
+                {
+                    text: "昨天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() - 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "今天",
+                    value: function(){
+                        return Date.now();
+                    }
+                },
+                {
+                    text: "明天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() + 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "上个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() - 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() + 1;
+                        now.setMonth(month);
+                        // 若下个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "某一天",
+                    value: "2016-10-14"
+                }
+            ]
+        });
+        $(".more-btn").click(function () {
+            if ($(".more-container").is(":hidden")) {
+                $(".more-container").show(); //如果元素为隐藏,则将它显现
+                $(".more-btn").html('收起<i class="layui-icon layui-icon-up"></i>')
+                $('#searchbtns').removeClass('layui-col-md3')
+                $('#searchbtns').addClass('layui-btn-center')
+            } else {
+                $('#searchbtns').addClass('layui-col-md3')
+                $('#searchbtns').removeClass('layui-btn-center')
+                $(".more-container").hide(); //如果元素为显现,则将其隐藏
+                $(".more-btn").html('展开<i class="layui-icon layui-icon-down"></i>')
+
+            }
+            return false;
+        })
+    });
+</script>
+</body>
+</html>

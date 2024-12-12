@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>基础输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">常规输入框字号14px，高度32px，边距12px，宽度随页面自适应。尽可能减少输入、给预设值，帮助用户准确、高效填写。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">基础输入框</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">内容清除</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title"  lay-affix="clear" autocomplete="off" placeholder="请输入" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">禁用</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="项目2.0" class="layui-input layui-disabled" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>输入框状态</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">输入框包括成功、警告、错误、禁用状态。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">成功</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" value="项目1.0" class="layui-input layui-input-success">
+                                    <p class="layui-tip layui-tip-success"><img src="src/images/layui-tip-success.png">这里写点提示信息</p>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">警告</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" value="项目2.0" class="layui-input layui-input-warm">
+                                    <p class="layui-tip layui-tip-warm"><img src="src/images/layui-tip-warm.png">这里写点提示信息</p>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">错误</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" value="项目3.0" class="layui-input layui-input-danger">
+                                    <p class="layui-tip layui-tip-danger"><img src="src/images/layui-tip-danger.png">这里写点提示信息</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>带图标输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">带有图标标记输入类型，输入框的纯修饰结构。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">姓名</label>
+                                <div class="layui-input-inline layui-input-leftico">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input"><i class="layui-icon layui-icon-username layui-date"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">搜索</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input layui-input-rightico"><i class="layui-icon layui-icon-search layui-date"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>前置和后置输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">分为前置、后置、前置和后置三种类型。构成完成的输入框操作。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">自定义验证</label>
+                            <div class="layui-input-inline">
+                                <input type="password" name="password" lay-verify="pass" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid layui-word-aux"><i class="layui-icon layui-icon-about"></i>请填写6到12位密码</div>
+                        </div>
+                    </div>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>密码输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">用于控制输入框内容的显示和隐藏。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">密码输入框</label>
+                                <div class="layui-input-inline">
+                                    <input type="password" lay-affix="eye" placeholder="请输入" class="layui-input layui-input-rightico" id="passInput">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>数字输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">用于替代原生数字输入框</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">常规</label>
+                                <div class="layui-input-inline">
+                                    <input type="number" lay-affix="number" placeholder="请输入" class="layui-input layui-input-rightico" id="passInput">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">禁用</label>
+                                <div class="layui-input-inline">
+                                    <input type="number" lay-affix="number"  placeholder="请输入" class="layui-input layui-input-rightico layui-disabled" id="passInput" disabled>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>长文本输入框</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">需要输入较多文字的时候使用。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">文本域</label>
+                            <div class="layui-input-block">
+									<textarea placeholder="请输入消息简介" maxlength="100" onpropertychange="if(value.length>100) value=value.substr(0,100)" name="desc"
+                                              id="layui_textarea" class="layui-textarea"></textarea>
+                                <div class="word"><span class="text_count">0</span>&nbsp;/&nbsp;<span class="num_count" id="numCount">100</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['form', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        laydate.render({
+            elem: '#date1'
+        });
+
+        //创建一个编辑器
+
+        //自定义验证规则
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [
+                /^[\S]{6,12}$/
+                ,'密码必须6到12位，且不能出现空格'
+            ]
+            ,content: function(value){
+            }
+        });
+
+        //监听指定开关
+        form.on('switch(switchTest)', function(data){
+            layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+        //表单赋值
+        layui.$('#LAY-component-form-setval').on('click', function(){
+            form.val('example', {
+                "username": "贤心" // "name": "value"
+                ,"password": "123456"
+                ,"interest": 1
+                ,"like[write]": true //复选框选中状态
+                ,"close": true //开关状态
+                ,"sex": "女"
+                ,"desc": "我爱 layui"
+            });
+        });
+
+        //表单取值
+        layui.$('#LAY-component-form-getval').on('click', function(){
+            var data = form.val('example');
+            alert(JSON.stringify(data));
+        });
+        layui.$('#layui_textarea').on('input',function(){
+            console.log(123)
+            var currleg = layui.$('#layui_textarea').val().length;
+            var length = layui.$('#layui_textarea').attr('maxlength');
+            if (currleg > length) {
+                layer.msg('字数请在' + length + '字以内');
+            } else {
+                layui.$('.text_count').text(currleg);
+            }
+        })
+    });
+</script>
+</body>
+</html>

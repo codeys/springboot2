@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+    <style>
+        /* 栅格示例 */
+        .grid-demo{ padding: 12px; line-height: 40px; text-align: center; background-color: #d3e5f9;}
+        .grid-demo-bg1{ background-color: #a6ccf3;}
+        .layui-row{ margin-bottom: 8px;}
+        .layui-grid-demo{ background-color: #F5F6FA; padding: 0px 12px;}
+        .layui-grid-demo .grid-demo{ height: 200px; padding: 0px; margin: 0px 12px;}
+        .layui-elem-label{ height: 32px; line-height: 32px; background: #2E3243; color: #FFF; padding: 0px 24px; display: inline-block; margin-right: 16px;}
+    </style>
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>基础布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">欢迎页、锁屏、系统级（如404、权限等）场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout1.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>纵向双列布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">对比、授权、时间轴，两列列表和表单等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout2.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>纵向左偏移布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">Tree+列表、Tab+列表和拓扑图构建、流程引导等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout3.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>纵向右偏移布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">在线编辑、控件布局及智能帮助等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout4.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>纵向三列布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">瀑布式信息、分类、三列列表和表单等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout5.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>横向两列布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">用于对比及信息、表单和列表等分组。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout6.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>横向上偏移布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">查询+列表、步骤表单等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout7.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>横向三列布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">信息、表单和列表等分组。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout8.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>混合布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">首页、业务图表等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout9.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md6">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>宫格布局</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">应用图标盒子等场景。</p>
+                    <div class="layui-row"><img src="src/images/layui-layout10.jpg" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

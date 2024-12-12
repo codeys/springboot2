@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="UTF-8"><title>首页</title>
+    <link rel="stylesheet" href="src/css/layui.css">
+    <style>
+        .layui-show {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <!--1.头部区域-->
+    <!--<div class="layui-header" style="background: #fff;">
+        <div class="layui-logo">后台管理</div>
+        <ul class="layui-nav layui-layout-left"></ul>
+            <ul class="layui-nav layui-layout-right">
+            </ul>
+    </div>-->
+    <!--2.左侧导航-->
+    <div class="layui-side">
+        <div class="layui-side layui-side-menu">
+            <div class="layui-side-scroll" style="padding-top:100px;box-sizing:border-box;">
+                <div class="layui-logo">
+                    <img src="src/images/logo.png" alt="">
+                </div>
+                <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
+                    <li class="layui-nav-item leftdaohang" data-url="welcome.html" mytitle="欢迎页">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico0.png"></i>
+                            <cite>欢迎页</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="color.html" mytitle="颜色">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico1.png"></i>
+                            <cite>颜色</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="text.html" mytitle="文本">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico2.png"></i>
+                            <cite>文本</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="border.html" mytitle="边框">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico3.png"></i>
+                            <cite>边框</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="divider.html" mytitle="分割线">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico4.png"></i>
+                            <cite>分割线</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico5.png"></i>
+                            <cite>组件</cite>
+                            <i class="layui-icon layui-icon-down layui-nav-more"></i>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd class="leftdaohang" data-url="button.html" mytitle="按钮">
+                                <a>按钮</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="breadcrumbs.html" mytitle="面包屑">
+                                <a>面包屑</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="pages.html" mytitle="分页">
+                                <a>分页</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="step.html" mytitle="步骤条">
+                                <a>步骤条</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="timeline.html" mytitle="时间轴">
+                                <a>时间轴</a>
+                            </dd>
+                            <dd>
+                                <a>表单控件</a>
+                                <dl class="layui-nav-child">
+                                    <dd class="leftdaohang" data-url="input.html" mytitle="输入框"><a>输入框</a></dd>
+                                    <dd class="leftdaohang" data-url="checkbox.html" mytitle="多选框"><a lay-href="">多选框</a></dd>
+                                    <dd class="leftdaohang" data-url="select.html" mytitle="下拉框"><a lay-href="">下拉框</a></dd>
+                                    <dd class="leftdaohang" data-url="laydate.html" mytitle="时间选择"><a lay-href="">时间选择</a></dd>
+                                </dl>
+                            </dd>
+                            <dd class="leftdaohang" data-url="tree.html" mytitle="树">
+                                <a lay-href="">树</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="shuttle.html" mytitle="穿梭框">
+                                <a lay-href="">穿梭框</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="upload.html" mytitle="上传">
+                                <a lay-href="">上传</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="picture.html" mytitle="图片">
+                                <a lay-href="">图片</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="grid.html" mytitle="栅格">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico6.png"></i>
+                            <cite>栅格</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="layout.html" mytitle="布局">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico7.png"></i>
+                            <cite>布局</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="form.html" mytitle="表单示例">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico8.png"></i>
+                            <cite>表单示例</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="table.html" mytitle="表格示例">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico9.png"></i>
+                            <cite>表格示例</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="tables.html" mytitle="数据表格示例">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico9.png"></i>
+                            <cite>数据表格示例</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item leftdaohang" data-url="dialog.html" mytitle="弹出层示例">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico10.png"></i>
+                            <cite>弹出层示例</cite>
+                        </a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="layui-nav-icon"><img src="src/images/layui-nav-ico11.png"></i>
+                            <cite>缺省页示例</cite>
+                            <i class="layui-icon layui-icon-down layui-nav-more"></i>
+                        </a>
+                        <dl class="layui-nav-child">
+                            <dd class="leftdaohang" data-url="default_404.html" mytitle="404">
+                                <a>404</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="default_505.html" mytitle="505">
+                                <a>505</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="default_error.html" mytitle="页面错误">
+                                <a>页面错误</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="default_permissions.html" mytitle="没有权限">
+                                <a>没有权限</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="default_overtime.html" mytitle="页面超时">
+                                <a>页面超时</a>
+                            </dd>
+                            <dd class="leftdaohang" data-url="default_empty.html" mytitle="暂无内容">
+                                <a>暂无内容</a>
+                            </dd>
+                        </dl>
+                    </li>
+
+                    <span class="layui-nav-bar" style="top: 0px; height: 0px; opacity: 0;"></span>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!--3.右侧主体内容区-->
+    <div class="layui-body" style="background: #fff;">
+        <!--tabs标签-->
+        <div class="layui-tab" lay-filter="demo" lay-allowclose="true" style="height: 100% !important;">
+            <ul class="layui-tab-title" style="padding:0 24px;">
+                <li lay-id="欢迎页" class="layui-this">欢迎页<i class="layui-icon layui-icon-close layui-unselect layui-tab-close"></i></li>
+            </ul>
+            <div class="layui-tab-content" style="height: 100%; padding: 0px;">
+                <div class="layui-tab-item layui-show" style="height: 100% !important;"><iframe style="width: 100%;height:calc(100% + 2px); border: 0px;" src="welcome.html"></iframe></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['jquery','element'], function(){
+        var $ = layui.jquery,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖elemel
+        //触发事件
+        var active = {
+            tabAdd: function(){//新增一个Tab项
+                var htmlurl=$(this).attr('data-url');
+                var mytitle=$(this).attr('mytitle');
+                var arrayObj = new Array(); //创建一个数组
+                $(".layui-tab-title").find("li").each(function(){
+                    var y = $(this).attr("lay-id");
+                    arrayObj.push(y);
+                })
+                var have=$.inArray(mytitle,arrayObj); //返回 3
+                if (have>=0){//tab已有标签
+                    element.tabChange('demo',mytitle); //切换到当前点击的页面
+                }else{
+                    //没有相同tab
+                    element.tabAdd('demo',{
+                        title:mytitle //用于演示
+                        ,content:'<iframe style="width: 100%;height:calc(100% + 2px); border: 0px;"  src='+htmlurl+'></iframe>' //实际使用一般是规定好的id，这里以时间戳模拟下element.tabChange('demo'，mytitle); //切换到当前点击的页面
+                        ,id:mytitle
+                    })
+                    element.tabChange('demo',mytitle);
+                }
+            }
+        }
+        $(".leftdaohang").click(function(){
+            var type="tabAdd";
+            var othis = $(this);
+            var htmlurl=$(this).attr('data-url');
+            var mytitle=$(this).attr('mytitle');
+            active[type] ? active[type].call(this, othis):'';
+        })
+    })
+</script>
+
+</body>
+</html>

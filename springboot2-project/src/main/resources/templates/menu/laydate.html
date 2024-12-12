@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>日期选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">日期选择器字号14px，高度32px。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期选择器</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test1" placeholder="请选择日期" autoConfirm><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>选择年月日</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">年：左箭头点击往前切换12个年选项，右箭头点击往后切换12个年选项；<br>月：左箭头点击往前切换上一年，右箭头点击往后切换下一年；<br>日：左箭头点击往前切换上月，右箭头点击往后切换下月，左双箭头点击往后切换上一年，右双箭头点击往后切换下一年，点击现在直接选择当前日期。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test2" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">月</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test3" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test5" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>选择日期区间</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">默认选择往后近一个月日期。结束日期不可在开始日期之前，如果结束日期在开始日期之前，确定按钮不可点。</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年区间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test7" placeholder="开始日期 - 结束日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">月区间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test8" placeholder="开始日期 - 结束日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日区间</label>
+                                <div class="layui-input-inline" style="width: 350px;">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test10" placeholder="开始日期 - 结束日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>时间选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">一般默认定位在00:00:00，可根据业务情况定义默认时间；点击清除清除所选</p>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">时间选择器</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test4" placeholder="请选择时间"><i class="layui-icon layui-icon-time layui-date"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>选择时间区间</legend>
+                    </fieldset>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">时间区间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="test9" placeholder="开始时间 - 结束时间"><i class="layui-icon layui-icon-time layui-date"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>带快捷键的时间选择</legend>
+                    </fieldset>
+                    <div class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-date" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年份</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-year" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年月</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-month" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">时间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-time" placeholder="请选择时间"><i class="layui-icon layui-icon-time layui-date"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期时间</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-datetime" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期时间全面板</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-datetime-fullPanel" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                                <legend>带快捷键的时间范围</legend>
+                            </fieldset>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期范围</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-range-date" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年份范围</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-range-year" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">年月范围</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-range-month" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">时间范围</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-range-time" placeholder="请选择时间"><i class="layui-icon layui-icon-time layui-date"></i>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">日期时间范围</label>
+                                <div class="layui-input-inline" style="width: 350px;">
+                                    <input type="text" class="layui-input layui-input-rightico" id="ID-laydate-shortcut-range-datetime" placeholder="请选择日期"><i class="layui-date-ico"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+<script>
+    layui.use(['laydate','util'], function(){
+        var laydate = layui.laydate;
+        var util = layui.util;
+        //常规用法
+        laydate.render({
+            elem: '#test1',
+        });
+
+        //国际版
+        laydate.render({
+            elem: '#test1-1'
+            ,lang: 'en'
+        });
+
+        //年选择器
+        laydate.render({
+            elem: '#test2'
+            ,type: 'year'
+        });
+
+        //年月选择器
+        laydate.render({
+            elem: '#test3'
+            ,type: 'month'
+        });
+
+        //时间选择器
+        laydate.render({
+            elem: '#test4'
+            ,type: 'time'
+        });
+
+        //日期时间选择器
+        laydate.render({
+            elem: '#test5'
+            ,type: 'datetime'
+        });
+
+        //日期范围
+        laydate.render({
+            elem: '#test6'
+            //设置开始日期、日期日期的 input 选择器
+            //数组格式为 2.6.6 开始新增，之前版本直接配置 true 或任意分割字符即可
+            ,range: ['#test-startDate-1', '#test-endDate-1']
+        });
+
+        //年范围
+        laydate.render({
+            elem: '#test7'
+            ,type: 'year'
+            ,range: true
+        });
+
+        //年月范围
+        laydate.render({
+            elem: '#test8'
+            ,type: 'month'
+            ,range: true
+        });
+
+        //时间范围
+        laydate.render({
+            elem: '#test9'
+            ,type: 'time'
+            ,range: true
+        });
+
+        //日期时间范围
+        laydate.render({
+            elem: '#test10'
+            ,type: 'datetime'
+            ,range: true
+        });
+
+        //自定义格式
+        laydate.render({
+            elem: '#test11'
+            ,format: 'yyyy年MM月dd日'
+        });
+        laydate.render({
+            elem: '#test12'
+            ,format: 'dd/MM/yyyy'
+        });
+        laydate.render({
+            elem: '#test13'
+            ,format: 'yyyyMMdd'
+        });
+        laydate.render({
+            elem: '#test14'
+            ,type: 'time'
+            ,format: 'H点m分'
+        });
+        laydate.render({
+            elem: '#test15'
+            ,type: 'month'
+            ,range: '~'
+            ,format: 'yyyy-MM'
+        });
+        laydate.render({
+            elem: '#test16'
+            ,type: 'datetime'
+            ,range: '到'
+            ,format: 'yyyy年M月d日H时m分s秒'
+        });
+
+        //开启公历节日
+        laydate.render({
+            elem: '#test17'
+            ,calendar: true
+        });
+
+        //自定义重要日
+        laydate.render({
+            elem: '#test18'
+            ,mark: {
+                '0-10-14': '生日'
+                ,'0-12-31': '跨年' //每年的日期
+                ,'0-0-10': '工资' //每月某天
+                ,'0-0-15': '月中'
+                ,'2017-8-15': '' //如果为空字符，则默认显示数字+徽章
+                ,'2099-10-14': '呵呵'
+            }
+            ,done: function(value, date){
+                if(date.year === 2017 && date.month === 8 && date.date === 15){ //点击2017年8月15日，弹出提示语
+                    layer.msg('这一天是：中国人民抗日战争胜利72周年');
+                }
+            }
+        });
+
+        //限定可选日期
+        var ins22 = laydate.render({
+            elem: '#test-limit1'
+            ,min: '2016-10-14'
+            ,max: '2080-10-14'
+            ,ready: function(){
+                ins22.hint('日期可选值设定在 <br> 2016-10-14 到 2080-10-14');
+            }
+        });
+
+        //前后若干天可选，这里以7天为例
+        laydate.render({
+            elem: '#test-limit2'
+            ,min: -7
+            ,max: 7
+        });
+
+        //限定可选时间
+        laydate.render({
+            elem: '#test-limit3'
+            ,type: 'time'
+            ,min: '09:30:00'
+            ,max: '17:30:00'
+            ,btns: ['clear', 'confirm']
+        });
+
+        //同时绑定多个
+        lay('.test-item').each(function(){
+            laydate.render({
+                elem: this
+                ,trigger: 'click'
+            });
+        });
+
+        //初始赋值
+        laydate.render({
+            elem: '#test19'
+            ,value: '1989-10-14'
+            ,isInitValue: true
+        });
+
+        //选中后的回调
+        laydate.render({
+            elem: '#test20'
+            ,done: function(value, date){
+                layer.alert('你选择的日期是：' + value + '<br>获得的对象是' + JSON.stringify(date));
+            }
+        });
+
+        //日期切换的回调
+        laydate.render({
+            elem: '#test21'
+            ,change: function(value, date){
+                layer.msg('你选择的日期是：' + value + '<br><br>获得的对象是' + JSON.stringify(date));
+            }
+        });
+        //不出现底部栏
+        laydate.render({
+            elem: '#test22'
+            ,showBottom: false
+        });
+
+        //只出现确定按钮
+        laydate.render({
+            elem: '#test23'
+            ,btns: ['confirm']
+        });
+
+        //自定义事件
+        laydate.render({
+            elem: '#test24'
+            ,trigger: 'mousedown'
+        });
+
+        //点我触发
+        laydate.render({
+            elem: '#test25'
+            ,eventElem: '#test25-1'
+            ,trigger: 'click'
+        });
+
+        //双击我触发
+        lay('#test26-1').on('dblclick', function(){
+            laydate.render({
+                elem: '#test26'
+                ,show: true
+                ,closeStop: '#test26-1'
+            });
+        });
+
+        //日期只读
+        laydate.render({
+            elem: '#test27'
+            ,trigger: 'click'
+        });
+
+        //非input元素
+        laydate.render({
+            elem: '#test28'
+        });
+
+        //墨绿主题
+        laydate.render({
+            elem: '#test29'
+            ,theme: 'molv'
+        });
+
+        //自定义颜色
+        laydate.render({
+            elem: '#test30'
+            ,theme: '#393D49'
+        });
+
+        //格子主题
+        laydate.render({
+            elem: '#test31'
+            ,theme: 'grid'
+        });
+
+
+        //直接嵌套显示
+        laydate.render({
+            elem: '#test-n1'
+            ,position: 'static'
+        });
+        laydate.render({
+            elem: '#test-n2'
+            ,position: 'static'
+            ,lang: 'en'
+        });
+        laydate.render({
+            elem: '#test-n3'
+            ,type: 'month'
+            ,position: 'static'
+        });
+        laydate.render({
+            elem: '#test-n4'
+            ,type: 'time'
+            ,position: 'static'
+        });
+
+        laydate.render({
+            elem: '#date'
+            ,eventElem: '.layui-date'
+            ,trigger: 'click'
+        });
+        laydate.render({
+            elem: "#ID-laydate-shortcut-date",
+            shortcuts: [
+                {
+                    text: "昨天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() - 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "今天",
+                    value: function(){
+                        return Date.now();
+                    }
+                },
+                {
+                    text: "明天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() + 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "上个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() - 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() + 1;
+                        now.setMonth(month);
+                        // 若下个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "某一天",
+                    value: "2016-10-14"
+                }
+            ]
+        });
+        // 年份
+        laydate.render({
+            elem: "#ID-laydate-shortcut-year",
+            type: "year",
+            shortcuts: [
+                {
+                    text: "去年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() - 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "明年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() + 1);
+                        return now;
+                    }
+                }
+            ]
+        });
+        // 年月
+        laydate.render({
+            elem: "#ID-laydate-shortcut-month",
+            type: "month",
+            shortcuts: [
+                {
+                    text: "上个月",
+                    value: function(){
+                        var now = new Date();
+                        now.setMonth(now.getMonth() - 1, 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var now = new Date();
+                        now.setMonth(now.getMonth() + 1, 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "去年本月",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() - 1);
+                        return now;
+                    }
+                }
+            ]
+        });
+        // 时间
+        laydate.render({
+            elem: "#ID-laydate-shortcut-time",
+            type: "time",
+            shortcuts: function(){ // 生成 30 分钟间隔的时间列表
+                var value = [];
+                var now = new Date();
+                now.setHours(0, 0, 0, 0);
+                for (var i = 0; i < 48; i++) {
+                    var nowTemp = now.setMinutes(now.getMinutes() + (i ? 30 : 0));
+                    var nowTimeStr = util.toDateString(nowTemp, "HH:mm:ss");
+                    value.push({
+                        text: nowTimeStr,
+                        value: nowTimeStr
+                    });
+                }
+                return value;
+            }()
+        });
+        // 日期时间
+        laydate.render({
+            elem: "#ID-laydate-shortcut-datetime",
+            type: "datetime",
+            shortcuts: [
+                {
+                    text: "昨天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() - 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "今天",
+                    value: function(){
+                        return Date.now();
+                    }
+                },
+                {
+                    text: "明天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() + 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "上个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() - 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() + 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "某一天",
+                    value: "2016-10-14 10:00:00"
+                }
+            ]
+        });
+        // 日期时间全面板
+        laydate.render({
+            elem: "#ID-laydate-shortcut-datetime-fullPanel",
+            type: "datetime",
+            fullPanel: true,
+            shortcuts: [
+                {
+                    text: "昨天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() - 1);
+                        return now;
+                    }
+                },
+                { text: "今天", value: Date.now() },
+                {
+                    text: "明天",
+                    value: function(){
+                        var now = new Date();
+                        now.setDate(now.getDate() + 1);
+                        return now;
+                    }
+                },
+                {
+                    text: "上个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() - 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var now = new Date();
+                        var month = now.getMonth() + 1;
+                        now.setMonth(month);
+                        // 若上个月数不匹配，则表示天数溢出
+                        if (now.getMonth() !== month) {
+                            now.setDate(0); // 重置天数
+                        }
+                        return [now];
+                    }
+                },
+                {
+                    text: "某一天",
+                    value: "2016-10-14 09:30:00"
+                }
+            ]
+        });
+        // 日期范围
+        laydate.render({
+            elem: "#ID-laydate-shortcut-range-date",
+            range: true,
+            shortcuts: [
+                {
+                    text: "上个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month - 1, 1),
+                            new Date(year, month, 0)
+                        ];
+                    }
+                },
+                {
+                    text: "这个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month, 1),
+                            new Date(year, month + 1, 0)
+                        ];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month + 1, 1),
+                            new Date(year, month + 2, 0)
+                        ];
+                    }
+                }
+            ]
+        });
+        // 年份范围
+        laydate.render({
+            elem: "#ID-laydate-shortcut-range-year",
+            type: "year",
+            range: true,
+            shortcuts: [
+                {
+                    text: "过去一年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() - 1);
+                        return [now, new Date()];
+                    }
+                },
+                {
+                    text: "未来一年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() + 1);
+                        return [new Date(), now];
+                    }
+                },
+                {
+                    text: "近三年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() - 3);
+                        return [now, new Date()];
+                    }
+                }
+            ]
+        });
+        // 年月范围
+        laydate.render({
+            elem: "#ID-laydate-shortcut-range-month",
+            type: "month",
+            range: true,
+            shortcuts: [
+                {
+                    text: "去年",
+                    value: function(){
+                        var now = new Date();
+                        var year = now.getFullYear() - 1;
+                        return [
+                            new Date(year, 0),
+                            new Date(year, 11)
+                        ];
+                    }
+                },
+                {
+                    text: "明年",
+                    value: function(){
+                        var now = new Date();
+                        var year = now.getFullYear() + 1;
+                        return [
+                            new Date(year, 0),
+                            new Date(year, 11)
+                        ];
+                    }
+                },
+                {
+                    text: "近三年",
+                    value: function(){
+                        var now = new Date();
+                        now.setFullYear(now.getFullYear() - 3);
+                        return [now, new Date()];
+                    }
+                }
+            ]
+        });
+        // 时间范围
+        laydate.render({
+            elem: "#ID-laydate-shortcut-range-time",
+            type: "time",
+            range: true,
+            shortcuts: [
+                {
+                    text: '09:30 <p style="text-align: center;">到</p> 11:30',
+                    value: (function () {
+                        var date1 = new Date();
+                        date1.setHours(9, 0, 0, 0);
+                        var date2 = new Date();
+                        date2.setHours(11, 30, 0, 0);
+                        return [date1, date2];
+                    })
+                },
+                {
+                    text: '13:00 <p style="text-align: center;">到</p> 15:00',
+                    value: (function () {
+                        var date1 = new Date();
+                        date1.setHours(13, 0, 0, 0);
+                        var date2 = new Date();
+                        date2.setHours(15, 0, 0, 0);
+                        return [date1, date2];
+                    })
+                }
+            ]
+        });
+        // 日期时间范围
+        laydate.render({
+            elem: "#ID-laydate-shortcut-range-datetime",
+            type: "datetime",
+            range: true,
+            shortcuts: [
+                {
+                    text: "上个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month - 1, 1),
+                            new Date(year, month, 0, 23, 59, 59)
+                        ];
+                    }
+                },
+                {
+                    text: "这个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month, 1),
+                            new Date(year, month + 1, 0, 23, 59, 59)
+                        ];
+                    }
+                },
+                {
+                    text: "下个月",
+                    value: function(){
+                        var date = new Date();
+                        var year = date.getFullYear();
+                        var month = date.getMonth();
+                        return [
+                            new Date(year, month + 1, 1),
+                            new Date(year, month + 2, 0, 23, 59, 59)
+                        ];
+                    }
+                }
+            ]
+        });
+    });
+</script>
+</body>
+</html>

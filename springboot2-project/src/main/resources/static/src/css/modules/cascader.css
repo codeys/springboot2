@@ -1,0 +1,101 @@
+/* #region 级联选择器 */
+.layui-input-block>i{
+    position: absolute;
+    top: 14px;
+    right: 42px;
+    cursor: pointer;
+}
+.urp-cascader-content{
+    white-space: nowrap;
+    border-right: 0px;
+    border-radius: 2px;
+    /*box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);*/
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    margin-top: 2px;
+	margin-left: 1px;
+}
+ul.urp-cascader-child{
+    display: inline-block;
+    vertical-align: top;
+    overflow: auto;
+    border: 1px solid #D3D6E2;
+    background-color: #fff;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 4px 0;
+    min-width: 160px;
+	max-height: 300px;
+	margin-left: -1px;
+}
+ul.urp-cascader-child>li>i{
+    float: right; font-size: 12px; color: #9599AC;
+}
+ul.urp-cascader-child>li{
+    font-size: 14px;
+    padding: 0px 12px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #42475B;
+    height: 32px;
+    line-height: 32px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: none;
+}
+ul.urp-cascader-child li.active{
+    color: #004EA2;
+	background: #F5F7FB;
+}
+ul.urp-cascader-child li.active:hover{
+    color: #004EA2;
+	background: #F5F7FB;
+}
+ul.urp-cascader-child li.active:hover i{ color: #9599AC;}
+ul.urp-cascader-child>li:hover{
+    background-color: #004EA2;
+	color: #FFF;
+}
+ul.urp-cascader-child>li:hover i{
+	color: #FFF;
+}
+
+/*ul.urp-cascader-child:first-of-type:after{
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    z-index: -1;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border: 1px solid #D3D6E2;
+}*/
+/* #endregion */
+.layui-icon-down::before,.layui-icon-up::before{ content: none;}
+.layui-icon-down{ 
+	border-left:5px solid transparent; 
+	border-right:5px solid transparent; 
+	border-top:5px solid #9599AC; 
+	transition:all .3s;
+ 	-webkit-transition:all .3s
+}
+.layui-icon-up{ 
+	border-left:5px solid transparent;  
+	border-right:5px solid transparent; 
+	border-top:5px solid #9599AC;
+	-webkit-transform:rotate(180deg);
+ 	transform:rotate(180deg);
+	transition:all .3s;
+ 	-webkit-transition:all .3s
+}
+
+
+
+
+

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>基础选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">常规选择器字号14px，高度32px。下拉菜单阴影使用基础阴影样式。<br>最多展示8个选择项，少干8个则出现滚动条。下拉选择器根据屏幕位置决定向下展示或者向上展示。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">单行选择器</label>
+                                <div class="layui-input-inline">
+                                    <select name="interest" lay-filter="aihao">
+                                        <option value="" selected="">请选择</option>
+                                        <option value="0">项目1.0</option>
+                                        <option value="1">项目2.0</option>
+                                        <option value="2">项目3.0</option>
+                                        <option value="3" disabled>项目4.0</option>
+                                        <option value="4" disabled>项目5.0</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="layui-inline">
+                                <label class="layui-form-label">禁用</label>
+                                <div class="layui-input-inline">
+                                    <select name="interest" lay-filter="aihao" disabled>
+                                        <option value="">请选择</option>
+                                        <option value="0">项目1.0</option>
+                                        <option value="1" selected="">项目2.0</option>
+                                        <option value="2">项目3.0</option>
+                                        <option value="3">项目4.0</option>
+                                        <option value="4">项目5.0</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>搜索选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">选择器可进行输入搜索。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">搜索选择器</label>
+                                <div class="layui-input-inline">
+                                    <select name="modules" lay-verify="required" lay-search="">
+                                        <option value="">直接选择或搜索选择</option>
+                                        <option value="1">layer</option>
+                                        <option value="2">form</option>
+                                        <option value="3">layim</option>
+                                        <option value="4">element</option>
+                                        <option value="5">laytpl</option>
+                                        <option value="6">upload</option>
+                                        <option value="7">laydate</option>
+                                        <option value="8">laypage</option>
+                                        <option value="9">flow</option>
+                                        <option value="10">util</option>
+                                        <option value="11">code</option>
+                                        <option value="12">tree</option>
+                                        <option value="13">layedit</option>
+                                        <option value="14">nav</option>
+                                        <option value="15">tab</option>
+                                        <option value="16">table</option>
+                                        <option value="17">select</option>
+                                        <option value="18">checkbox</option>
+                                        <option value="19">switch</option>
+                                        <option value="20">radio</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>分组选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">分组不宜过多，超过5个建议用下拉tree的形式；分级分组，建议选择级联菜单。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">分组选择器</label>
+                                <div class="layui-input-inline">
+                                    <select name="quiz">
+                                        <option value="">请选择</option>
+                                        <optgroup label="分组1">
+                                            <option value="0">项目1.0</option>
+                                        </optgroup>
+                                        <optgroup label="分组2">
+                                            <option value="1">项目2.0</option>
+                                            <option value="2">项目3.0</option>
+                                        </optgroup>
+                                        <optgroup label="分组3">
+                                            <option value="3">项目4.0</option>
+                                            <option value="4">项目5.0</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">分组可搜索</label>
+                                <div class="layui-input-inline">
+                                    <select name="quiz" lay-search="">
+                                        <option value="">请选择</option>
+                                        <optgroup label="分组1">
+                                            <option value="0">项目1.0</option>
+                                        </optgroup>
+                                        <optgroup label="分组2">
+                                            <option value="1">项目2.0</option>
+                                            <option value="2">项目3.0</option>
+                                        </optgroup>
+                                        <optgroup label="分组3">
+                                            <option value="3">项目4.0</option>
+                                            <option value="4">项目5.0</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">分组多选</label>
+                                <div class="layui-input-inline" style="width: 350px;">
+                                    <select name="city" xm-select="select1" xm-select-search>
+                                        <optgroup label="分组1">
+                                            <option value="1" disabled="disabled">北京</option>
+                                            <option value="2" selected="selected">上海</option>
+                                        </optgroup>
+                                        <optgroup label="分组2">
+                                            <option value="3">广州</option>
+                                            <option value="4" selected="selected">深圳</option>
+                                            <option value="5">天津</option>
+                                        </optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>级联选择器</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">常规选择器字号14px，高度32px。下拉菜单阴影使用基础阴影样式。<br>最多展示8个选择项，少干8个则出现滚动条。下拉选择器根据屏幕位置决定向下展示或者向上展示。</p>
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">级联选择器</label>
+                                <div class="layui-input-block">
+                                    <input type="text" id="demo2" class="layui-input layui-input-rightico" readonly="readonly" style="width: 350px;">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+<link rel="stylesheet" href="src/css/modules/formSelects-v4.css" />
+<link rel="stylesheet" href="src/css/modules/cascader.css" />
+<script>
+    layui.config({
+        base:'./extends/'
+    });
+    layui.use(['form', 'laydate','jquery','formSelects','cascader'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,laydate = layui.laydate;
+        var formSelects = layui.formSelects;
+        var cascader = layui.cascader;
+        formSelects.search('select1', '关键内容');
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+        laydate.render({
+            elem: '#date1'
+        });
+
+        //创建一个编辑器
+
+        //自定义验证规则
+        form.verify({
+            title: function(value){
+                if(value.length < 5){
+                    return '标题至少得5个字符啊';
+                }
+            }
+            ,pass: [
+                /^[\S]{6,12}$/
+                ,'密码必须6到12位，且不能出现空格'
+            ]
+
+        });
+
+        //监听指定开关
+        form.on('switch(switchTest)', function(data){
+            layer.msg('开关checked：'+ (this.checked ? 'true' : 'false'), {
+                offset: '6px'
+            });
+            layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+        });
+
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            layer.alert(JSON.stringify(data.field), {
+                title: '最终的提交信息'
+            })
+            return false;
+        });
+
+        //表单赋值
+        layui.$('#LAY-component-form-setval').on('click', function(){
+            form.val('example', {
+                "username": "贤心" // "name": "value"
+                ,"password": "123456"
+                ,"interest": 1
+                ,"like[write]": true //复选框选中状态
+                ,"close": true //开关状态
+                ,"sex": "女"
+                ,"desc": "我爱 layui"
+            });
+        });
+
+        //表单取值
+        layui.$('#LAY-component-form-getval').on('click', function(){
+            var data = form.val('example');
+        });
+        let option=[{
+            value: 'zhinan',
+            label: '指南',
+            disabled: true,
+            children: [{
+                value: 'shejiyuanze',
+                label: '设计原则',
+                children: [{
+                    value: 'yizhi',
+                    label: '一致'
+                }, {
+                    value: 'fankui',
+                    label: '反馈'
+                }, {
+                    value: 'xiaolv',
+                    label: '效率'
+                }, {
+                    value: 'kekong',
+                    label: '可控'
+                }]
+            }, {
+                value: 'daohang',
+                label: '导航',
+                children: [{
+                    value: 'cexiangdaohang',
+                    label: '侧向导航'
+                }, {
+                    value: 'dingbudaohang',
+                    label: '顶部导航'
+                }]
+            }]
+        }, {
+            value: 'zujian',
+            label: '组件',
+            children: [{
+                value: 'basic',
+                label: 'Basic',
+                children: [{
+                    value: 'layout',
+                    label: 'Layout 布局'
+                }, {
+                    value: 'color',
+                    label: 'Color 色彩'
+                }, {
+                    value: 'typography',
+                    label: 'Typography 字体'
+                }, {
+                    value: 'icon',
+                    label: 'Icon 图标'
+                }, {
+                    value: 'button',
+                    label: 'Button 按钮'
+                }]
+            }, {
+                value: 'form',
+                label: 'Form',
+                children: [{
+                    value: 'radio',
+                    label: 'Radio 单选框'
+                }, {
+                    value: 'checkbox',
+                    label: 'Checkbox 多选框'
+                }, {
+                    value: 'input',
+                    label: 'Input 输入框'
+                }, {
+                    value: 'input-number',
+                    label: 'InputNumber 计数器'
+                }, {
+                    value: 'select',
+                    label: 'Select 选择器'
+                }, {
+                    value: 'cascader',
+                    label: 'Cascader 级联选择器'
+                }, {
+                    value: 'switch',
+                    label: 'Switch 开关'
+                }, {
+                    value: 'slider',
+                    label: 'Slider 滑块'
+                }, {
+                    value: 'time-picker',
+                    label: 'TimePicker 时间选择器'
+                }, {
+                    value: 'date-picker',
+                    label: 'DatePicker 日期选择器'
+                }, {
+                    value: 'datetime-picker',
+                    label: 'DateTimePicker 日期时间选择器'
+                }, {
+                    value: 'upload',
+                    label: 'Upload 上传'
+                }, {
+                    value: 'rate',
+                    label: 'Rate 评分'
+                }, {
+                    value: 'form',
+                    label: 'Form 表单'
+                }]
+            }, {
+                value: 'data',
+                label: 'Data',
+                children: [{
+                    value: 'table',
+                    label: 'Table 表格'
+                }, {
+                    value: 'tag',
+                    label: 'Tag 标签'
+                }, {
+                    value: 'progress',
+                    label: 'Progress 进度条'
+                }, {
+                    value: 'tree',
+                    label: 'Tree 树形控件'
+                }, {
+                    value: 'pagination',
+                    label: 'Pagination 分页'
+                }, {
+                    value: 'badge',
+                    label: 'Badge 标记'
+                }]
+            }, {
+                value: 'notice',
+                label: 'Notice',
+                children: [{
+                    value: 'alert',
+                    label: 'Alert 警告'
+                }, {
+                    value: 'loading',
+                    label: 'Loading 加载'
+                }, {
+                    value: 'message',
+                    label: 'Message 消息提示'
+                }, {
+                    value: 'message-box',
+                    label: 'MessageBox 弹框'
+                }, {
+                    value: 'notification',
+                    label: 'Notification 通知'
+                }]
+            }, {
+                value: 'navigation',
+                label: 'Navigation',
+                children: [{
+                    value: 'menu',
+                    label: 'NavMenu 导航菜单'
+                }, {
+                    value: 'tabs',
+                    label: 'Tabs 标签页'
+                }, {
+                    value: 'breadcrumb',
+                    label: 'Breadcrumb 面包屑'
+                }, {
+                    value: 'dropdown',
+                    label: 'Dropdown 下拉菜单'
+                }, {
+                    value: 'steps',
+                    label: 'Steps 步骤条'
+                }]
+            }, {
+                value: 'others',
+                label: 'Others',
+                children: [{
+                    value: 'dialog',
+                    label: 'Dialog 对话框'
+                }, {
+                    value: 'tooltip',
+                    label: 'Tooltip 文字提示'
+                }, {
+                    value: 'popover',
+                    label: 'Popover 弹出框'
+                }, {
+                    value: 'card',
+                    label: 'Card 卡片'
+                }, {
+                    value: 'carousel',
+                    label: 'Carousel 走马灯'
+                }, {
+                    value: 'collapse',
+                    label: 'Collapse 折叠面板'
+                }]
+            }]
+        }, {
+            value: 'ziyuan',
+            label: '资源',
+            children: [{
+                value: 'axure',
+                label: 'Axure Components'
+            }, {
+                value: 'sketch',
+                label: 'Sketch Templates'
+            }, {
+                value: 'jiaohu',
+                label: '组件交互文档'
+            }]
+        }]
+
+        cascader({
+            elem: '#demo2',
+            data: option
+        });
+        cascader.reload()
+    });
+
+</script>
+</body>
+</html>

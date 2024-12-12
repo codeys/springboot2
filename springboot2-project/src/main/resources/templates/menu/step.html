@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>设计规范</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="src/css/layui.css">
+</head>
+<body>
+
+<div class="layui-bg-gray" style="padding: 24px;">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+            <div class="layui-card">
+                <div class="layui-card-body" style="clear: both; overflow: hidden;">
+
+                    <fieldset class="layui-elem-field layui-field-title">
+                        <legend>基础步骤条</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">3-5步默认使用横向步骤条。存在常规、进行中、错误、完成情况。</p>
+                    <div class="layui-row">
+                        <ul class="layui-step-base">
+                            <li class="layui-step-base-complete" style="width: 240px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="width: 240px;">
+                                <dl>
+                                    <dt><label><em></em></label></dt>
+                                    <dd><p>进行中</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label></label></dt>
+                                    <dd><p>等待</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="layui-step-base">
+                            <li class="layui-step-base-complete" style="width: 240px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="width: 240px;">
+                                <dl>
+                                    <dt><label><em></em></label></dt>
+                                    <dd><p>进行中</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-error" style="width: 240px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-close"></i></label></dt>
+                                    <dd><p>错误</p></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label></label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="layui-step-base">
+                            <li class="layui-step-base-complete" style="width: 240px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="width: 240px;">
+                                <dl>
+                                    <dt><label><em></em></label></dt>
+                                    <dd><p>进行中</p></dd>
+                                </dl>
+                            </li>
+                            <li style="width: 240px;">
+                                <dl>
+                                    <dt><label></label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                            <li style="width: 240px;">
+                                <dl>
+                                    <dt><label></label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label></label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>纵向步骤条</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">纵向不小于3个为宜。响应不同分辨率；当浏览器分辨率过小时，酌情可将横轴切换成纵抽。</p>
+                    <div class="layui-row">
+                        <ul class="layui-step-base layui-step-base-lengthwise" style="width: 240px;">
+                            <li class="layui-step-base-complete" style="height: 100px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="height: 100px;">
+                                <dl>
+                                    <dt><label>2</label></dt>
+                                    <dd><p>进行中</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label>3</label></dt>
+                                    <dd><p>等待</p><span>辅助信息</span></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="layui-step-base layui-step-base-lengthwise" style="width: 240px;">
+                            <li class="layui-step-base-complete" style="height: 100px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="height: 100px;">
+                                <dl>
+                                    <dt><label>2</label></dt>
+                                    <dd><p>进行中</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-error" style="height: 100px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-close"></i></label></dt>
+                                    <dd><p>错误</p></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label>4</label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                        <ul class="layui-step-base layui-step-base-lengthwise" style="width: 240px;">
+                            <li class="layui-step-base-complete" style="height: 100px;">
+                                <dl>
+                                    <dt><label><i class="layui-icon layui-icon-ok"></i></label></dt>
+                                    <dd><p>完成</p></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-step-base-active" style="height: 100px;">
+                                <dl>
+                                    <dt><label>2</label></dt>
+                                    <dd><p>进行中</p></dd>
+                                </dl>
+                            </li>
+                            <li style="height: 100px;">
+                                <dl>
+                                    <dt><label>3</label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                            <li style="height: 100px;">
+                                <dl>
+                                    <dt><label>4</label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                            <li>
+                                <dl>
+                                    <dt><label>5</label></dt>
+                                    <dd><p>等待</p></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>横向步骤条</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">依据业务情况使用横向步骤条。</p>
+                    <div class="layui-row">
+                        <ul class="layui-step-horizontal">
+                            <li class="layui-step-start"><p><label>1</label>进行中</p></li>
+                            <li><p><label>2</label>等待</p></li>
+                            <li class="layui-step-end"><p><label>3</label>等待</p></li>
+                        </ul>
+                        <ul class="layui-step-horizontal">
+
+                            <li class="layui-step-start layui-step-horizontal-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-horizontal-active"><p><label>2</label>进行中</p></li>
+                            <li class="layui-step-end"><p><label>3</label>等待</p></li>
+                        </ul>
+                        <ul class="layui-step-horizontal">
+                            <li class="layui-step-start layui-step-horizontal-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-horizontal-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-end layui-step-horizontal-active"><p><label>3</label>进行中</p></li>
+                        </ul>
+                        <ul class="layui-step-horizontal">
+                            <li class="layui-step-start layui-step-horizontal-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-horizontal-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-end layui-step-horizontal-error"><p><label><i class="layui-icon layui-icon-close"></i></label>错误</p></li>
+                        </ul>
+                        <ul class="layui-step-horizontal">
+                            <li class="layui-step-start"><p><label>1</label>进行中</p></li>
+                            <li><p><label>2</label>等待</p></li>
+                            <li><p><label>3</label>等待</p></li>
+                            <li class="layui-step-end"><p><label>4</label>等待</p></li>
+                        </ul>
+                        <ul class="layui-step-horizontal">
+                            <li class="layui-step-start"><p><label>1</label>进行中</p></li>
+                            <li><p><label>2</label>等待</p></li>
+                            <li><p><label>3</label>等待</p></li>
+                            <li><p><label>4</label>等待</p></li>
+                            <li class="layui-step-end"><p><label>5</label>等待</p></li>
+                        </ul>
+                    </div>
+
+                    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 40px;">
+                        <legend>简约步骤条</legend>
+                    </fieldset>
+                    <p class="layui-elem-p">常用于弹窗等小窗口中。</p>
+                    <div class="layui-row">
+                        <ul class="layui-step-simplicity">
+                            <li class="layui-step-simplicity-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li class="layui-step-simplicity-active"><p><label>2</label>进行中</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>3</label>等待</p></li>
+                        </ul>
+                        <ul class="layui-step-simplicity">
+                            <li class="layui-step-simplicity-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li class="layui-step-simplicity-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li class="layui-step-simplicity-error"><p><label><i class="layui-icon layui-icon-close"></i></label>错误</p></li>
+                        </ul>
+                        <ul class="layui-step-simplicity">
+                            <li class="layui-step-simplicity-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li class="layui-step-simplicity-active"><p><label>2</label>进行中</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>3</label>等待</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>4</label>等待</p></li>
+                        </ul>
+                        <ul class="layui-step-simplicity">
+                            <li class="layui-step-simplicity-complete"><p><label><i class="layui-icon layui-icon-ok"></i></label>完成</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li class="layui-step-simplicity-active"><p><label>2</label>进行中</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>3</label>等待</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>4</label>等待</p></li>
+                            <li class="layui-step-simplicity-right"><i class="layui-icon layui-icon-right"></i></li>
+                            <li><p><label>5</label>等待</p></li>
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/layui.js" charset="utf-8"></script>
+</body>
+</html>
