@@ -1,7 +1,6 @@
 package com.springboot2.config;
 
-import com.springboot2.util.TaskSchedulingService;
-import javafx.concurrent.Task;
+import com.springboot2.util.TaskSchedulingUtil;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -24,7 +23,7 @@ public class GlobalConfig {
      * @return
      */
     @Bean
-    public TaskSchedulingService taskSchedulingService(DataSourceProperties dataSourceProperties) {
-        return new TaskSchedulingService(dataSourceProperties);
+    public TaskSchedulingUtil taskSchedulingService(DataSourceProperties dataSourceProperties) {
+        return new TaskSchedulingUtil(dataSourceProperties);
     }
 }

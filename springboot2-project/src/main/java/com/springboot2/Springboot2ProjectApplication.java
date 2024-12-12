@@ -4,6 +4,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import java.util.concurrent.CompletableFuture;
+
 /**
  * Druid
  * Redis
@@ -12,6 +14,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Mybatis Plus
  * quartz
  * 切面打印日志
+ * 线程池
+ * CompletableFuture 异步编排
  */
 
 @SpringBootApplication

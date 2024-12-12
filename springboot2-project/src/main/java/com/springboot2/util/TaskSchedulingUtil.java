@@ -3,23 +3,13 @@ package com.springboot2.util;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
-import com.springboot2.job.MyJob;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 import org.quartz.impl.matchers.GroupMatcher;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStream;
 import java.util.Iterator;
 import java.util.List;
@@ -34,12 +24,12 @@ import java.util.Set;
  * @create 2024/11/8 9:54
  */
 @Slf4j
-public class TaskSchedulingService {
-    private static TaskSchedulingService taskSchedulingService = null;
+public class TaskSchedulingUtil {
+    private static TaskSchedulingUtil taskSchedulingService = null;
     private Scheduler scheduler = null;
 
 
-    public TaskSchedulingService(DataSourceProperties dataSourceProperties) {
+    public TaskSchedulingUtil(DataSourceProperties dataSourceProperties) {
         createScheduler(dataSourceProperties);
     }
 

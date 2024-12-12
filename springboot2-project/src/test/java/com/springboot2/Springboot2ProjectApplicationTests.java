@@ -3,19 +3,12 @@ package com.springboot2;
 import com.alibaba.fastjson2.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.springboot2.entity.User;
-import com.springboot2.job.MyJob;
 import com.springboot2.mapper.UserMapper;
-import com.springboot2.util.TaskSchedulingService;
-import javafx.concurrent.Task;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
-
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Slf4j
 @SpringBootTest
