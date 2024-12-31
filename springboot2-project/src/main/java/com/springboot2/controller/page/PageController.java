@@ -7,7 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author Administrator
  * @version 1.0
  * @title PageController
- * @description 页面跳转
+ * @description 页面跳转。
+ * 无逻辑处理，仅页面跳转的接口，可以通过实现WebMvcConfigurer.addViewControllers进行处理
  * @create 2024/12/4 16:28
  */
 @Controller
