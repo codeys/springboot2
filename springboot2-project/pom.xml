@@ -21,6 +21,7 @@
         <jackson.version>2.13.0</jackson.version>
         <redisson.version>3.17.0</redisson.version>
         <common-configuration2.version>2.11.0</common-configuration2.version>
+        <okhttp.version>4.11.0</okhttp.version>
     </properties>
     <dependencies>
         <dependency>
@@ -74,6 +75,21 @@
             <groupId>com.alibaba.fastjson2</groupId>
             <artifactId>fastjson2</artifactId>
             <version>${fastjson2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>${okhttp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-collections</groupId>
+            <artifactId>commons-collections</artifactId>
+            <version>3.2.2</version>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>

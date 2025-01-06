@@ -16,6 +16,7 @@ import java.util.concurrent.CompletableFuture;
  * 切面打印日志
  * 线程池
  * CompletableFuture 异步编排
+ * BCryptPasswordEncoder密码加密器
  */
 
 @SpringBootApplication
